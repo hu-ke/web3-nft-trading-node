@@ -5,10 +5,10 @@
  */
 module.exports = app => {
   const { router, controller } = app;
-  router.get('/test', controller.nft.test);
-  router.post('/getMintedNFTs', controller.nft.getMintedNFTs);
-  router.get('/getMyNFTs', controller.nft.getMyNFTs);
-  router.post('/createNFT', controller.nft.create);
-  router.post('/deleteNFT', controller.nft.delete);
-  router.post('/updateNFTAccount', controller.nft.updateNFTAccount);
+  router.get('/api/test', controller.nft.test);
+  router.post('/api/getMintedNFTs', controller.nft.getMintedNFTs);
+  router.get('/api/getMyNFTs', controller.nft.getMyNFTs);
+  router.post('/api/createNFT', controller.nft.create);
+  router.post('/api/deleteNFT', controller.nft.delete);
+  router.post('/api/updateNFTAccount', controller.nft.updateNFTAccount);
 };
