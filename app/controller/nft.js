@@ -8,8 +8,7 @@ class NFTController extends Controller {
 
   async getMintedNFTs() {
     const { ctx } = this;
-    const uris = ctx.request.body;
-    const nfts = await ctx.service.nft.getMintedNFTs(uris);
+    const nfts = await ctx.service.nft.getMintedNFTs();
     ctx.body = {
       msg: 'success',
       code: 200,

@@ -6,7 +6,7 @@
 module.exports = app => {
   const { router, controller } = app;
   router.get('/api/test', controller.nft.test);
-  router.post('/api/getMintedNFTs', controller.nft.getMintedNFTs);
+  router.get('/api/getMintedNFTs', controller.nft.getMintedNFTs);
   router.get('/api/getMyNFTs', controller.nft.getMyNFTs);
   router.post('/api/createNFT', controller.nft.create);
   router.post('/api/deleteNFT', controller.nft.delete);

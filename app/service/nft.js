@@ -9,7 +9,7 @@ class NFTService extends Service {
   async getMintedNFTs(uris) {
     const nfts = await this.app.mysql.select('nfts', {
       where: {
-        image: uris
+        isMinted: true
       }
     });
     return nfts;
