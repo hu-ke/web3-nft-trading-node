@@ -56,6 +56,17 @@ class NFTService extends Service {
     });
     return result
   }
+
+  async updateNFTMintingStatus(nftId, isMinted) {
+    const result = await this.app.mysql.update('nfts', {
+      isMinted,
+    }, {
+      where: {
+        id: nftId,
+      },
+    });
+    return result
+  }
 }
 
 module.exports = NFTService;

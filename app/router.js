@@ -11,4 +11,5 @@ module.exports = app => {
   router.post('/api/createNFT', controller.nft.create);
   router.post('/api/deleteNFT', controller.nft.delete);
   router.post('/api/updateNFTAccount', controller.nft.updateNFTAccount);
+  router.post('/api/updateNFTMintingStatus', controller.nft.updateNFTMintingStatus);
 };

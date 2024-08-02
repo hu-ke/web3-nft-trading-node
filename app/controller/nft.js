@@ -80,13 +80,30 @@ class NFTController extends Controller {
     const result = await ctx.service.nft.updateNFTAccount(nftId, account);
     if (result.affectedRows === 1) {
       ctx.body = {
-        success: true,
-        message: 'Account updated successfully',
+        code: 200,
+        msg: 'Account updated successfully',
       };
     } else {
       ctx.body = {
-        success: false,
-        message: 'Failed to update account',
+        code: 500,
+        msg: 'Failed to update account',
+      };
+    }
+  }
+
+  async updateNFTMintingStatus() {
+    const { ctx } = this;
+    const { nftId, isMinted } = ctx.request.body;
+    const result = await ctx.service.nft.updateNFTMintingStatus(nftId, isMinted);
+    if (result.affectedRows === 1) {
+      ctx.body = {
+        code: 200,
+        msg: 'Minting Status updated successfully',
+      };
+    } else {
+      ctx.body = {
+        code: 500,
+        msg: 'Failed to update account',
       };
     }
   }
