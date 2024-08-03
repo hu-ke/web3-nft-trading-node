@@ -19,8 +19,6 @@ The Web3 NFT Trading Node provides the server-side functionality required for th
 
 - **API for NFT Generation:** Endpoints to create unique NFTs with customizable metadata.
 - **API for NFT Trading:** Endpoints for buying, selling, and trading NFTs.
-- **Blockchain Interaction:** Interacts with the Ethereum blockchain on the Sepolia test network.
-- **Security:** Implements security best practices for handling sensitive data and transactions.
 
 ## Getting Started
 
@@ -28,7 +26,7 @@ The Web3 NFT Trading Node provides the server-side functionality required for th
 
 - Node.js
 - npm or yarn
-- MongoDB (or another database)
+- MySQL
 
 ### Installation
 
